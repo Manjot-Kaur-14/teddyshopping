@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teddy's Shopping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .wrapper {
+            margin-top: 10px;
+            /* background-color: rgb(240, 240, 107); */
+            width: 100%;
+            height: 4200px;
+        }
+        .down-bg {
+            background-color: rgb(242, 227, 221);
+            width: 100%;
+            height: 3200px;
+        }   
+        .inner-down-bg {
+            background-color: blueviolet;
+            margin-left: 150px;
+            margin-right: 150px;
+            height: 1500px;
+            border-radius: 10px;
+            padding-top: 0;
+        }
+        .c21 {
+            /* background-color: rgb(126, 1, 1); */
+            height: 60px;
+            background: linear-gradient(to bottom, rgb(205, 9, 9) 0%, black 200%);
+            width: 100%;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+            padding-top: 17px;
+            padding-bottom: 10px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        .c21 > ul{
+            list-style: none;
+        }
+        .c21>ul li {
+            display: inline-block;
+            height: 5vh;
+            margin: 4px;
+            padding-top: 0;
+            padding-left: 25px;
+            /* text-align: center; */
+        }
+        .c21>ul li:hover{
+            background-color: rgb(255, 177, 93);
+        }
+        .c22 {
+            margin-left: 15px;
+            width: 22%;
+            height: 3095px;
+            background-color: rgb(255, 255, 255);
+            color: black;
+            float: left; 
+        }
+        .c22>h1 {
+            font-size: 16px;
+            padding-left: 20px;
+            padding-top: 21px;
+            padding-bottom: 14px;
+            border-bottom: 1px dashed black;
+        }
+        .c22>ul li{
+            list-style: none;
+            text-decoration: none;
+            padding-top: 12px;
+            font-size: 14px;
+            padding-left: 30px;
+            /* padding: 5px; */
+        }
+        .images {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 3095px;
+        }
+        .hd {
+            background-color: blue;
+            /* margin: 0 auto; */
+            width: 70%;
+            height: 200px;
+        }
+        .img1 {
+            background-color: rgb(255, 255, 255);
+            width: 37%;
+            height: 400px;
+            padding-left: 20px;
+            margin-top: 20px;
+            float: left;
+        }
+        .img2 {
+            background-color: rgb(139, 17, 17);
+            width: 36%;
+            height: 400px;
+            margin-top: 20px;
+            margin-left: 20px;
+            float: left;
+        }
+        .img3 {
+            background-color: rgb(210, 244, 39);
+            width: 23%;
+            height: 200px;
+            margin-top: 20px;
+            float: left;
+            margin-left: 20px;
+            position: relative;
+        }
+        .img3one > p{
+            width: 42%;
+            height: 22%;
+            font-size: 15px;
+            padding-top: 13px;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: bold;
+            background-color: rgb(139, 1, 1);
+            color: rgb(255, 255, 255);
+            position: absolute;
+            top: 140px;
+            right: 150px;
+        }
+        .img4 {
+            background-color: rgb(247, 145, 114);
+            width: 24%;
+            height: 200px;
+            margin-top: 20px;
+            margin-left: 20px;
+            float: left;
+            position: relative;
+        }
+        .img4one > p1{
+            width: 42%;
+            height: 22%;
+            font-size: 15px;
+            padding-top: 13px;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: bold;
+            background-color: rgb(139, 1, 1);
+            color: rgb(255, 255, 255);
+            position: absolute;
+            top: 175px;
+            right: 35px;
+        }
+        .img4one > p2{
+            text-align: left;
+            color: rgb(139, 1, 1);
+            font-size: 27px;
+            font-weight: bolder;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        .img4one > p3{
+            text-align: right;
+            color: rgb(0, 0, 0);
+            font-size: 15px;
+            font-weight: bold;
+            position: absolute;
+            top: 35px;
+            right: 10px;
+        }
+        .img5 {
+            /* background-color: rgb(144, 14, 129); */
+            width: 19%;
+            height: 250px;
+            margin-top: 20px;
+            margin-left: 20px;
+            float: left;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .details>img {
+            max-width: 100%;
+            height: auto;
+            border: none;
+            vertical-align: top;
+            float: left;
+        }
+
+        .hh {
+            font-size: 8px;
+            padding-left: 10px;
+            padding-top: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid black;
+            color: black;
+        }
+
+        .featured {
+            background-color: rgb(255, 255, 255);
+            width: 73%;
+            height: 1000px;
+            margin-top: 20px;
+            margin-left: 20px;
+            float: left;
+        }
+
+        .prices {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 1920px;
+            margin-top: 25px;
+            border-bottom: 1px solid black;
+            float: left;
+        }
+
+        .i11 {
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 10px;
+        }
+        .i22 {
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i33 {
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i44 {
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i55 {
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 10px;
+        }
+        .i66 {
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i77 {
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i88 {
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i99 {
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 10px;
+        }
+        .i111 {
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i121 {
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i131 {
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i141 {
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 10px;
+        }
+        .i151 {
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i161{
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i171{
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i181{
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 10px;
+        }
+        .i191{
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i201{
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i211{
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i221{
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 10px;
+        }
+        .i231{
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i241{
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+        .i251{
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            width: 22%;
+            height: 300px;
+            float: left;
+            margin-left: 30px;
+        }
+
+
+        .i12 {
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i13 {
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i23 {
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i24 {
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i34 {
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i35 {
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i45 {
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i46 {
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i56 {
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i57 {
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i67 {
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i68 {
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i78 {
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i79 {
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i89 {
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i90 {
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i100 {
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i101 {
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i112 {
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i113 {
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i122 {
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i123 {
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i132 {
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i133 {
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i142{
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i143{
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i152{
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i153{
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i162{
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i163{
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i172{
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i173{
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i182{
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i183{
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i192{
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i193{
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i202{
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i203{
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i212{
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i213{
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i222{
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i223{
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i232{
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i233{
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i242{
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i243{
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+        .i252{
+            background-color: aqua;
+            width: 100%;
+            height: 190px;
+            float: left;
+        }
+        .i253{
+            /* background-color: rgb(241, 250, 160); */
+            width: 100%;
+            height: 110px;
+            float: left;
+        }
+
+
+        .p1 {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .p2 {
+            font-weight: normal;
+            font-size: 14px;
+        }
+        .p3 {
+            font-weight: lighter;
+            font-size: 22px;
+            color: rgb(201, 2, 2);
+            margin-top: 3px;
+        }
+        .welcome{
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 378px;
+            float: left;
+            padding-top: 30px;
+            margin-top: 40px;
+        }
+        .first {
+            width: 20%;
+            height: 348px;
+            background-color: rgb(255, 255, 255);
+            float: left;
+        }
+        .first > img{
+            width: 100%;
+            height: 180px;
+            margin-top: 20px;
+        } 
+        .second{
+            width: 80%;
+            height: 348px;
+            background-color: rgb(255, 255, 255);
+            float: left;
+        }
+        .second > h1,p{
+            margin-left: 20px;
+        }
+        .inner-up-bg {
+            /* background-color: rgb(1, 1, 138); */
+            margin-left: 150px;
+            margin-right: 150px;
+            height: 160px;
+            padding-top: 0;   
+            width: 90%;     
+        }
+        .side-logo{
+            width: 14%;
+            height: 160px;
+            float: left;
+        }
+        .up-bg {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 160px;
+            background-image: url("images/head-bg.png");
+        }
+        .bottom-bg{
+            width: 100%;
+            height: 60px;
+            float: left;
+            background-image: url("images/head-bg.png");
+            transform: rotate(180deg);
+        }
+        .side-logo > img{
+            width: 95%;
+            height: 161px;
+            margin-left: 3px;
+        }
+        .menu{
+            width: 76%;
+            height: 160px;
+            float: left;
+            /* background-color: rgb(159, 159, 204); */
+        }
+        .up-menu{
+            width: 100%;
+            height: 80px;
+            clear: both;
+            /* position: relative; */
+            /* background-color: aqua; */
+        }
+        .up-menu-inner{
+            width: 79%;
+            height: 50px;
+            /* position: absolute;
+            top: 8px;
+            left: 75px; */
+            padding: 0;
+            margin: 0;
+            /* padding-left: 20px; */
+            /* list-style: none; */
+            float: right;
+            /* background-color: rgb(218, 119, 203); */
+        }
+        .up-menu-inner > ul li {
+            display: inline-block;
+            height: 5vh;
+            margin: 5px;
+            padding-top: 5px;
+            padding-left: 22px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .up-menu-inner > ul{
+            padding: 0px;
+        }
+        .up-menu-inner > ul li a{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        .up-menu-inner> ul li i{
+            padding-right: 6px;
+        }
+        .up-menu-inner > ul li a img{
+            width: 124px;
+            height: 24px;
+            padding-top: 2px;
+        } 
+        .down-menu{
+            width: 79%;
+            height: 80px;
+            float: right;
+            /* background-color: rgb(210, 109, 14); */
+            /* position: relative; */
+        }
+        .down-menu-inner>ul{
+            list-style: none;
+        }
+        .down-menu-inner{
+            width: 63%;
+            height: 70px;
+            float: right;
+            /* background-color: rgb(215, 122, 134); */
+            /* position: absolute;
+            top: 0px;
+            left: 380px; */
+        }
+        .down-menu-inner> ul li{
+            padding: 1px;
+            font-weight: bold;
+            align-items: center;
+            text-align: center;
+        }
+        .down-menu-inner > h1{
+            color: brown;
+            padding: 2px;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 15px;
+            align-items: center;
+            text-align: center;
+            text-decoration: 1px solid black underline;
+        }
+        .down-menu-inner > ul li a{
+            font-weight: bold;
+            color: black;
+            float: right;
+            
+        }
+        .foot{
+            width: 100%;
+            height: 660px;
+            float: left;
+            margin-top: 0;
+            /* background-color: chartreuse; */
+            border-bottom: 1px solid black;
+        }
+        .foot1{
+            width: 25%;
+            height: 650px;
+            float: left;
+            /* background-color: red; */
+        }
+        .foot1>h1 {
+            color: rgb(149, 0, 0);
+            font-size: 16px;
+            padding-left: 160px;
+            padding-top: 20px;
+            padding-bottom: 2px;
+            /* border-bottom: 1px dashed black; */
+        }
+        .foot1>ul li{
+            list-style: none;
+            text-decoration: none;
+            padding-top: 12px;
+            font-size: 15px;
+            padding-left: 160px;
+            /* padding: 5px; */
+        }
+        .foot2{
+            width: 16%;
+            height: 650px;
+            float: left;
+            /* background-color: yellow; */
+        }
+        .foot2>h1 {
+            color: rgb(149, 0, 0);
+            font-size: 16px;
+            padding-left: 0;
+            padding-top: 20px;
+            padding-bottom: 2px;
+            /* border-bottom: 1px dashed black; */
+        }
+        .foot2>ul li{
+            list-style: none;
+            text-decoration: none;
+            padding-top: 12px;
+            font-size: 15px;
+            padding-left: 2px;
+            /* padding: 5px; */
+        }
+        .foot3{
+            width: 16%;
+            height: 650px;
+            float: left;
+            /* background-color: blue; */
+        }
+        .foot3>h1 {
+            color: rgb(149, 0, 0);
+            font-size: 16px;
+            padding-left: 0;
+            padding-top: 20px;
+            padding-bottom: 2px;
+            /* border-bottom: 1px dashed black; */
+        }
+        .foot3>ul li{
+            list-style: none;
+            text-decoration: none;
+            padding-top: 12px;
+            font-size: 15px;
+            padding-left: 2px;
+            /* padding: 5px; */
+        }
+        .foot4{
+            width: 13%;
+            height: 650px;
+            float: left;
+            /* background-color: orange; */
+        }
+        .foot4>h1 {
+            color: rgb(149, 0, 0);
+            font-size: 16px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 2px;
+            /* border-bottom: 1px dashed black; */
+        }
+        .foot4>ul li{
+            list-style: none;
+            text-decoration: none;
+            padding-top: 12px;
+            font-size: 15px;
+            padding-left: 10px;
+            /* padding: 5px; */
+        }
+        .foot5{
+            width: 30%;
+            height: 650px;
+            float: left;
+            /* background-color: green; */
+        }
+        .foot5>h1 {
+            color: rgb(149, 0, 0);
+            font-size: 16px;
+            padding-left: 20px;
+            padding-top: 20px;
+            padding-bottom: 17px;
+            /* border-bottom: 1px dashed black; */
+        }
+        .foot5>form p{
+            margin-bottom: 2px;
+            display: flex;
+            align-items: center;
+        }
+        input[type="text"], input[type="email"]{
+            /* flex: 1; */
+            /* padding: 15px; */
+            padding-left: 30px;
+            padding-right: 50px;
+            padding-top: 17px;
+            padding-bottom: 17px;
+            font-size: 16px;
+            border: 1px solid black;
+        }
+        input[type="submit"] {
+            background-color: rgb(142, 0, 0);
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            border: none;
+            padding: 14px 23px;
+            margin-left: 5px;
+            cursor: pointer;
+            border-radius: 25px;
+            margin-top: 17px;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(142, 0, 0);
+        }
+        .inner-connect{
+            width: 90%;
+            height: 50px;
+            float: left;
+            position: relative;padding-top: 2px;
+            padding-left: 23px;
+            /* background-color: aqua; */
+        }
+        .inner-connect> ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        .inner-connect> ul li{
+            display: inline-block;
+            margin-right: 35px;   
+        }
+        .inner-connect> ul li i {
+            font-size: 27px;
+        }
+        .last{
+            width: 50%;
+            height: 130px;
+            /* background-color: pink; */
+            float: left;
+            margin-top: 10px;
+        }
+        .last>img{
+            width: 59%;
+            height: 52%;
+            margin: 35px ;
+            padding-left: 125px;
+        }
+        .last-p{
+            width: 50%;
+            height: 130px;
+            /* background-color: rgb(193, 72, 92); */
+            float: left;
+            margin-top: 10px;
+            position: relative;
+        }
+        .last-p>p{
+            float: right;
+            position: absolute;
+            top: 60px;
+            right: 140px;
+            font-size: 14px;
+            color: darkgray;
+        }
+        .fix{
+            width: 118px;
+            height: 25px;
+            /* background-color: rgb(194, 66, 62); */
+            position: fixed;
+            bottom:17px;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="up-bg">
+        <!-- <img src="images/head-bg.png" alt=""> -->
+            <div class="inner-up-bg">
+                <div class="side-logo">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <div class="menu">
+                    <div class="up-menu">
+                        <div class="up-menu-inner">
+                            <ul>
+                                <li><a href="#"><img src="images/offline-1281585584.png" alt="LIVE CHAT" >
+                                    </a></li>
+                                <li>
+                                    <i class="fa-solid fa-phone"></i>
+                                    <a href="#">626-279-2861</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone"></i>
+                                    <a href="#">TEXT:626-693-2545</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <a href="#">SEARCH</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-cart-flatbed-suitcase"></i>
+                                    <a href="#">VIEW CART</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="down-menu">
+                        <div class="down-menu-inner">
+                            <h1>THE LEADING SUPPLIER OF TEDDY BEARS FOR 18 YEARS IN US</h1>
+                            <ul>
+                                <li> WE PROVIDE VALUABLE SERVICE AND BUILD UP RELATIONSHIP</li>
+                                <li>SALES@MSTEDDYBEAR.COM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+         <div class="down-bg">
+            <div class="inner-down-bg">
+                <div class="c21">
+                    <ul>
+                        <li>FREE SHIPPING BOXES</li>
+                        <li>CLOSEOUT</li>
+                        <li>MOCHI SQUISHES</li>
+                        <li>DOLLS/BIRTHDAY/MERMAID</li>
+                    </ul>
+                </div>
+                <div class="c22">
+                    <div class="hh">
+                        <h1>SHOP BY CATEGORIES</h1>
+                    </div>
+                    <h1>TEDDY BEARS</h1>
+                    <ul>
+                        <li>Teddy bear 4"-8"</li>
+                        <li>Teddy bear 9"-10"</li>
+                        <li>Teddy bear 11"-13"</li>
+                        <li>Teddy bear 14"-15"</li>
+                        <li>Teddy bear 16"-19"</li>
+                        <li>Teddy bear 20"-50"</li>
+                        <li>Doctor,Nurse,Firefighter</li>
+                    </ul>
+
+                    <h1>PERSONALIZED</h1>
+                    <ul>
+                    <li>Personalized bear $4(TA)</li>
+                    <li>Personalized bear $5(TB)</li>
+                    <li>Personalized bear $5(TC)</li>
+                    <li>Personalized bear $6(TD)</li>
+                    <li>Personalized bear $7(TF)</li>
+                    <li>Personalized bear $7(TE)</li>
+                    <li>Personalized bear $8&UP(TG)</li>
+                    <li>Personalized bear $8&UP(TH)</li>
+                    <li>Personalized ribbon & tag</li>
+                    <li>Individual Packing</li>
+                    </ul>
+
+                    <h1>STUFFED ANIMALS</h1>
+                    <ul>
+                        <li>Stuffed animal mixes</li>
+                        <li>Embroidered animals</li>
+                        <li>Dog/ Cat/ Rabbit/ Koala(SA)</li>
+                        <li>Tiger/ Lion/ Leopard(SB)</li>
+                        <li>Monkey/ Lama/ Alpaca(SC)</li>
+                        <li>Panda/Hippo/Fox/Unicorn(SD)</li>
+                        <li>Giraffe/ Elephant/ Dino(SE)</li>
+                        <li>Cow/ Frog/ Duck/ Pig(SF)</li>
+                        <li>Dolls/ Birthday/ Mermaid</li>
+                        <li>Mochi Squishes</li>
+                        <li>CLOSEOUT</li>
+                    </ul>
+            
+                    <h1>FREE SHIPPING BOXES</h1>
+                    <ul>
+                        <li>Free shipping boxes(large)</li>
+                        <li>Free shipping boxes(med)</li>
+                        <li>Free shipping boxes(small)</li>
+                        <li>Free shipping boxes(mix)</li>
+                    </ul>
+
+                    <h1>HOLIDAY PLUSH</h1>
+                    <ul>
+                        <li>Graduation</li>
+                        <li>Mother's Day</li>
+                        <li>Christmas</li>
+                        <li>Valentines</li>
+                    </ul>
+
+                    <h1>OUT OF STOCK</h1><br><br>
+                    <h1>FAQS</h1><br>
+                    <h1>CHARITY PROGRAMS</h1>
+                    <ul>
+                        <li>MS Charity 2008-2024</li><br>
+                    </ul>
+                    <h1>SALES TAX</h1>
+                </div>
+
+                <div class="images">
+                    <div class="img1">
+                        <img src="images/home-39.png" alt="">
+                    </div>
+                    <div class="img2">
+                        <img src="images/home-40.png" alt="">
+                    </div>
+                    <div class="img3">
+                            <img src="images/Screenshot 2024-06-20 060125.png" alt="">
+
+                        <div class="img3one">
+                            <p>SHOP NOW</p>
+                        </div> 
+                    </div>
+
+                    <div class="img4">
+                            <img src="images/mmmmmm.jpeg" alt="">
+
+                        <div class="img4one">
+                            <p1>SHOP NOW</p1>
+                            <p2>Free Shipping Boxes!</p2>
+                            <p3>Free Shipping<br>Boxes to save<br>you Big!</p3>
+                        </div>
+                    </div>
+                    <div class="img5">
+                        <iframe width="120%" height="200px"
+                            src="https://www.youtube.com/embed/IA8Q0rv_YnM?si=Xt2jq3sv6TsYxs2P"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="featured">
+                        <div class="hh">
+                            <h1>FEATURED PRODUCTS</h1>
+                        </div>
+                        <div class="prices">
+                            <div class="i11">
+                                <div class="i12">
+                                    <img src="images/c29-1912b-12-brown-bear-19.gif" alt="">
+                                </div>
+                                <div class="i13">
+                                    <p class="p1">#B29, 10"EMBROIDERY EYE SUPERSOFT BEAR<br><br></p>
+                                    <p class="p2">Price: $4.50</p>
+                                    <p class="p3">On Sale: $2.50</p>
+                                </div>
+                            </div>
+                            <div class="i22">
+                                <div class="i23">
+                                    <img src="images/1.gif" alt="">
+                                </div>
+                                <div class="i24">
+                                    <p class="p1">#C27- 12.5"TAN TEDDY BEAR<br><br></p>
+                                    <p class="p2">Price: $4.50</p>
+                                    <p class="p3">On Sale: $2.85</p>
+                                </div>
+                            </div>
+                            <div class="i33">
+                                <div class="i34">
+                                    <img src="images/2.gif" alt="">
+                                </div>
+                                <div class="i35">
+                                    <p class="p1">#B10B, 10"STANDING BROWN TEDDY BEAR<br><br></p>
+                                    <p class="p2">Price: $4.50</p>
+                                    <p class="p3">On Sale: $2.50</p>
+                                </div>
+                            </div>
+                            <div class="i44">
+                                <div class="i45">
+                                    <img src="images/3.gif" alt="">
+                                </div>
+                                <div class="i46">
+                                    <p class="p1">#B1-10"SITTING CREAM BEAR<br><br></p>
+                                    <p class="p2">Price: $5.95</p>
+                                    <p class="p3">On Sale: $3.50</p>
+                                </div>
+                            </div>
+                            <div class="i55">
+                                <div class="i56">
+                                    <img src="images/4.gif" alt="">
+                                </div>
+                                <div class="i57">
+                                    <p class="p1">#TD3- 12"BROWN PLUSH TEDDY BEAR WITH LOGO<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$6.85</p>
+                                </div>
+                            </div>
+                            <div class="i66">
+                                <div class="i67">
+                                    <img src="images/5.gif" alt="">
+                                </div>
+                                <div class="i68">
+                                    <p class="p1">#TB1- 7"TEDDY BEAR WITH LOGO<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$5.75</p>
+                                </div>
+                            </div>
+                            <div class="i77">
+                                <div class="i78">
+                                    <img src="images/6.gif" alt="">
+                                </div>
+                                <div class="i79">
+                                    <p class="p1">#TB8- 7"STUFFED ANIMAL FROG/LOGO<br><br></p>
+                                    <p class="p2">Price: $5.85</p>
+                                    <p class="p3">On Sale: $4.50</p>
+                                </div>
+                            </div>
+                            <div class="i88">
+                                <div class="i89">
+                                    <img src="images/7.gif" alt="">
+                                </div>
+                                <div class="i90">
+                                    <p class="p1">#TA1-A, 6.5" MIX STUFFED ANIMAL WITH LOGO<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$5.50</p>
+                                </div>
+                            </div>
+                            <div class="i99">
+                                <div class="i100">
+                                    <img src="images/8.gif" alt="">
+                                </div>
+                                <div class="i101">
+                                    <p class="p1">#D35- 12015B- 15" TEDDY BEAR WITH SCARF (9,700+PCS SOLD)<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$6.50</p>
+                                </div>
+                            </div>
+                            <div class="i111">
+                                <div class="i112">
+                                    <img src="images/9.gif" alt="">
+                                </div>
+                                <div class="i113">
+                                    <p class="p1">#C1E- 12" EMBROIDERY TEDDY BEAR<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$5.95</p>
+                                </div>
+                            </div>
+                            <div class="i121">
+                                <div class="i122">
+                                    <img src="images/10.gif" alt="">
+                                </div>
+                                <div class="i123">
+                                    <p class="p1">#B8E- 10" SITTING BEAR WITH EMBROIDERY EYES<br><br></p>
+                                    <p class="p2">Price: $5.95</p>
+                                    <p class="p3">On Sale: $5.50</p>
+                                </div>
+                            </div>
+                            <div class="i131">
+                                <div class="i132">
+                                    <img src="images/11.gif" alt="">
+                                </div>
+                                <div class="i133">
+                                    <p class="p1">#D10P- 15" BIG SITTING MOCHA TEDDY BEAR<br><br></p>
+                                    <p class="p2">Price: $8.50</p>
+                                    <p class="p3">On Sale: $6.50</p>
+                                </div>
+                            </div>
+                            <div class="i141">
+                                <div class="i142">
+                                    <img src="images/12.gif" alt="">
+                                </div>
+                                <div class="i143">
+                                    <p class="p1">#SE5- 10" DINO<br><br></p>
+                                    <p class="p2">Price: $6.50</p>
+                                    <p class="p3">On Sale: $5.95</p>
+                                </div>
+                            </div>
+                            <div class="i151">
+                                <div class="i152">
+                                    <img src="images/13.gif" alt="">
+                                </div>
+                                <div class="i153">
+                                    <p class="p1">#SG3- 10" UNICORN (4,400+PCS SOLD)<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$5.95</p>
+                                </div>
+                            </div>
+                            <div class="i161">
+                                <div class="i162">
+                                    <img src="images/14.gif" alt="">
+                                </div>
+                                <div class="i163">
+                                    <p class="p1">#SA11E- 12" EMBROIDERY EYE DOG<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$5.95</p>
+                                </div>
+                            </div>
+                            <div class="i171">
+                                <div class="i172">
+                                    <img src="images/15.gif" alt="">
+                                </div>
+                                <div class="i173">
+                                    <p class="p1">#SE8E- 12" EMBROIDERY EYE ELEPHANT (3,700+PCS SOLD)<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$5.95</p>
+                                </div>
+                            </div>
+                            <div class="i181">
+                                <div class="i182">
+                                    <img src="images/16.gif" alt="">
+                                </div>
+                                <div class="i183">
+                                    <p class="p1">#DL1A- 15" BALLLERINA DOLL<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$6.50</p>
+                                </div>
+                            </div>
+                            <div class="i191">
+                                <div class="i192">
+                                    <img src="images/17.gif" alt="">
+                                </div>
+                                <div class="i193">
+                                    <p class="p1">#DL13- 16" BALLERINA DOLL WITH GOLDEN DRESS - SOLD OUT<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$5.95</p>
+                                </div>
+                            </div>
+                            <div class="i201">
+                                <div class="i202">
+                                    <img src="images/18.gif" alt="">
+                                </div>
+                                <div class="i203">
+                                    <p class="p1">#DL-2, 18" COLORFUL MERMAID<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$5.95</p>
+                                </div>
+                            </div>
+                            <div class="i211">
+                                <div class="i212">
+                                    <img src="images/19.gif" alt="">
+                                </div>
+                                <div class="i213">
+                                    <p class="p1">#DL10- 13" DANCING DOLL WITH PINK DRESS<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$4.75</p>
+                                </div>
+                            </div>
+                            <div class="i221">
+                                <div class="i222">
+                                    <img src="images/20.gif" alt="">
+                                </div>
+                                <div class="i223">
+                                    <p class="p1">#MS7- 7" MOCHI SQUISHES ELEPHANT<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$3.50</p>
+                                </div>
+                            </div>
+                            <div class="i231">
+                                <div class="i232">
+                                    <img src="images/21.gif" alt="">
+                                </div>
+                                <div class="i233">
+                                    <p class="p1">#MS15-7" MOCHI SQUISHES UNICORN<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$3.50</p>
+                                </div>
+                            </div>
+                            <div class="i241">
+                                <div class="i242">
+                                    <img src="images/22.jpeg" alt="">
+                                </div>
+                                <div class="i243">
+                                    <p class="p1">#TC8- 7" MOCHI SQUISHES GIRAFFE WITH LOGO BIB<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$5.50</p>
+                                </div>
+                            </div>
+                            <div class="i251">
+                                <div class="i252">
+                                    <img src="images/23.jpeg" alt="">
+                                </div>
+                                <div class="i253">
+                                    <p class="p1">#TC90- 7" MOCHI SQUISHES DOG WITH LOGO BIB<br><br></p>
+                                    <p class="p2"> </p>
+                                    <p class="p3">$5.50</p>
+                                </div>
+                            </div>
+                        <div class="welcome">
+                            <div class="first">
+                                <img src="images/logo.png" alt="">
+                            </div>
+                            <div class="second">
+                                <h1>Welcome to MS Teddy Bear</h1><br>
+                                <p>Since 2006, we have been supplying teddy bears and stuffed animals to our customers. On the following pages you will see many plush animals to meet all your gift needs.<br><br>We are one of the largest plush stuffed animal toys companies in the world and are proud to offer our unique brand “MS TEDDY BEAR”. We offer hundreds of different styles of stuffed animals from traditional teddy bears to other stuffed animals such as black black bear, dog, cat, cow, monkey, panda, giraffe, elephant, tiger, lion, zebra, frog, pig, bee, lady bug, dolls… our stuffed animals family is growing every day!<br><br>Your satisfaction is our top priority! No question returning! You just need to send your bear back to get the FULL REFUND or Exchange.<br><br>  Please do not stop by our location to purchase, as our office is a wholesale location only and not open to the public. You may place your order online and pick it up at this location. Thanks!</p>
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+
+        </div> 
+        <div class="bottom-bg"></div>
+        <div class="foot">
+            <div class="foot1">
+                <h1>TEDDY BEARS</h1>
+                    <ul>
+                        <li>Teddy bear 4"-8"</li>
+                        <li>Teddy bear 9"-10"</li>
+                        <li>Teddy bear 11"-13"</li>
+                        <li>Teddy bear 14"-15"</li>
+                        <li>Teddy bear 16"-19"</li>
+                        <li>Teddy bear 20"-50"</li>
+                        <li>Doctor,Nurse,Firefighter</li><br>
+                    </ul>
+
+                    <h1>PERSONALIZED</h1>
+                    <ul>
+                    <li>Personalized bear $4(TA)</li>
+                    <li>Personalized bear $5(TB)</li>
+                    <li>Personalized bear $5(TC)</li>
+                    <li>Personalized bear $6(TD)</li>
+                    <li>Personalized bear $7(TF)</li>
+                    <li>Personalized bear $7(TE)</li>
+                    <li>Personalized bear $8&UP(TG)</li>
+                    <li>Personalized bear $8&UP(TH)</li>
+                    <li>Personalized ribbon & tag</li>
+                    <li>Individual Packing</li>
+                    </ul>
+            </div>
+            <div class="foot2">
+                <h1>STUFFED ANIMALS</h1>
+                    <ul>
+                        <li>Stuffed animal mixes</li>
+                        <li>Embroidered animals</li>
+                        <li>Dog/ Cat/ Rabbit/ Koala(SA)</li>
+                        <li>Tiger/ Lion/ Leopard(SB)</li>
+                        <li>Monkey/ Lama/ Alpaca(SC)</li>
+                        <li>Panda/Hippo/Fox/Unicorn(SD)</li>
+                        <li>Giraffe/ Elephant/ Dino(SE)</li>
+                        <li>Cow/ Frog/ Duck/ Pig(SF)</li>
+                        <li>Dolls/ Birthday/ Mermaid</li>
+                        <li>Mochi Squishes</li>
+                        <li>CLOSEOUT</li><br>
+                    </ul>
+                    <h1>HOLIDAY PLUSH</h1>
+                    <ul>
+                        <li>Graduation</li>
+                        <li>Mother's Day</li>
+                        <li>Christmas</li>
+                        <li>Valentines</li>
+                    </ul>
+            </div>
+            <div class="foot3">
+                <h1>FREE SHIPPING BOXES</h1>
+                    <ul>
+                        <li>Free shipping boxes(large)</li>
+                        <li>Free shipping boxes(med)</li>
+                        <li>Free shipping boxes(small)</li>
+                        <li>Free shipping boxes(mix)</li><br>
+                    </ul>
+                    <h1>CUSTOMER SERVICE</h1>
+                    <ul>
+                        <li>Shipping & Pickup</li>
+                        <li>Contact</li><br>
+                    </ul>
+                    <h1>CHARITY PROGRAMS</h1>
+                    <ul>
+                        <li>MS Charity 2008-2024</li><br>
+                    </ul>
+            </div>
+            <div class="foot4">
+                <h1>HELP</h1>
+                <ul>
+                    <li>Home</li>
+                    <li>About & Terms</li>
+                    <li>Privacy Policy</li>
+                    <li>Sales Tax</li>
+                    <li>Testimonials</li>
+                    <li>Site Map</li>
+                </ul>
+            </div>
+            <div class="foot5">
+                <h1>SUBSCRIBE TO NEWSLETTER</h1>
+                <form>
+                    <p>
+                    <label for="mail"></label>
+                    <input type="email" id="mail" placeholder="Enter your email address"><br>
+                    </p>
+                    <p>
+                    <label for="fname"></label>
+                    <input type="text" id="fname" placeholder="Enter your name"><br>
+                    </p>
+                    <p>
+                    <input type="submit" value="SUBSCRIBE">
+                    </p>
+                  </form>
+
+                  <br><br><h1>CONNECT WITH</h1>
+                  <div class="connect"></div>
+                    <div class="inner-connect">
+                        <ul>
+                            <li>
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-twitter"></i>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-pinterest-p"></i>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-google-plus-g"></i>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-blogger-b"></i>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <div class="last">
+                <img src="images/purchase-deat.png" alt="">
+            </div>
+            <div class="last-p">
+                <p>Copyright 2023 MSTeddyBear.com</p>
+            </div>
+            <div class="fix">
+                <a href="#"><img src="images/offline-1281585584.png" alt="LIVE CHAT" ></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
